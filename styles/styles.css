@@ -6,11 +6,16 @@
 /* Body Configs */
 body{
     background-color: #141414;
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 /* Body Content Positioning */
 .content{
     display: flex;
@@ -18,7 +23,7 @@ body{
 
 /* Center Container Style */
 #centercontainer{
-    background-color: #666666;
+    background-color: #141414;
     max-width: 600px;
     width: 600px;
     height: 600px;

@@ -6,28 +6,58 @@
 /* Body Configs */
 body{
     background-color: #141414;
-    height: 100vH;
+    min-height: 100vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 /* Body Content Positioning */
 .content{
     display: flex;
-    justify-content: center;
 }
+
 /* Center Container Style */
 #centercontainer{
     background-color: #666666;
+    max-width: 600px;
     width: 600px;
-    height: 800px;
+    height: 600px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
 }
 /* Calculator Style */
 #calculator{
-    display: grid;
-    grid-template: "number number operator";
-    grid-template: "number number operator";
-    grid-template: "number number operator";
-    grid-template: "number number operator";
-    grid-template: "number number operator";
+    display: flex;
+    width: 300px;
+    height: 300px;
+    flex-direction: column;
+    background-color: #dbdbdb;
+    align-items: center;
+}
+
+/* Console Format and Font Style*/
+#console{
+    display: flex;
+    background-color: #141414;
+    width: 280px;
+    height: 80px;
+    justify-self: center;
+    margin: 16px;
+    color: #dbdbdb;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    font-style: normal;
+}
+
+div.buttons, .operators{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Buttons Style */
@@ -38,4 +68,18 @@ button{
     margin: 8px;
     border: solid 1px #141414;
     border-radius: 8px;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button.operatorButtons{
+    background-color: #141414;
+    color: #dbdbdb;
+}
+
+button.operatorButtons#resultButton{
+    background-color: #c43232;
 }

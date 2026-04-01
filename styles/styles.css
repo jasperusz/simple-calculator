@@ -1,0 +1,41 @@
+/* Reset Formatações */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* Body Configs */
+body{
+    background-color: #141414;
+    height: 100vH;
+    width: 100%;
+}
+/* Body Content Positioning */
+.content{
+    display: flex;
+    justify-content: center;
+}
+/* Center Container Style */
+#centercontainer{
+    background-color: #666666;
+    width: 600px;
+    height: 800px;
+}
+/* Calculator Style */
+#calculator{
+    display: grid;
+    grid-template: "number number operator";
+    grid-template: "number number operator";
+    grid-template: "number number operator";
+    grid-template: "number number operator";
+    grid-template: "number number operator";
+}
+
+/* Buttons Style */
+button{
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+    margin: 8px;
+    border: solid 1px #141414;
+    border-radius: 8px;
+}

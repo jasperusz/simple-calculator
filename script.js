@@ -19,7 +19,6 @@ function getButtonNumber(buttonClick) {
     }
 };
 
-
 // Function to Clear the Calculator when the C button is pressed //
 function clearCalculator(buttonClick) {
     if (buttonClick === 'clear') {
@@ -36,6 +35,13 @@ function clearCalculator(buttonClick) {
 // Function to get active operator and acumulate the first numbers //
 function getActiveOperator(buttonClick) {
     initialValue = parseInt(consoleAcumulator);
+    if (activeButton !== 'clear') {
+        operate(buttonClick);
+        initialValue = parseInt(consoleAcumulator);
+        consoleText.textContent = `${consoleAcumulator}`;
+        consoleAcumulator = '';
+        activeButton = buttonClick;
+    };
     consoleText.textContent = buttonClick;
     consoleAcumulator = '';
     activeButton = buttonClick;

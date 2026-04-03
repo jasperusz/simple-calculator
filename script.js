@@ -6,9 +6,11 @@ let consoleText = document.getElementById('consoleText');
 const getNumberButtons = document.getElementsByClassName('numberButtons');
 const maxNumbers = 9;
 
+
+// Function to get the numbers pressed //
 function getButtonNumber(buttonClick) {
     buttonPressed = buttonClick;
-    consoleAcumulator += buttonPressed;
+    consoleAcumulator += buttonPressed; // concat the buttons pressed into consoleAcumulator
     consoleText.textContent = `${consoleAcumulator}`;
     if (consoleAcumulator.length == maxNumbers) {
         for (let buttons of getNumberButtons) {
@@ -38,3 +40,27 @@ function getActiveOperator(buttonClick) {
     consoleAcumulator = '';
     activeButton = buttonClick;
 };
+
+
+// Operate function which get the activebutton and activate within pressing result button //
+function operate(buttonClick) {
+    buttonPressed = '=';
+    if (activeButton === '+') {
+        consoleAcumulator = initialValue + parseInt(consoleAcumulator);
+        } else if (activeButton === '-') {
+        consoleAcumulator = initialValue - parseInt(consoleAcumulator);
+        } else if (activeButton === '*') {
+        consoleAcumulator = initialValue * parseInt(consoleAcumulator);
+        } else if (activeButton === '/') {
+            if (parseInt(consoleAcumulator) === 0) {
+                consoleAcumulator = initialValue;
+            } else {
+            consoleAcumulator = initialValue / parseInt(consoleAcumulator);
+            };
+        };
+        // It only shows the result when resultButton is pressed
+        if (buttonClick === '=') {
+            consoleText.textContent = `${consoleAcumulator}`
+        };  
+    };
+
